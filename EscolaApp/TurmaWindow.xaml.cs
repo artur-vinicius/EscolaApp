@@ -53,7 +53,7 @@ namespace EscolaApp
             // Inserir a turma na lista de turmas
             NTurma.Excluir(t);
             // Lista a turma inserida
-            ListarClick(sender, e);
+            listar_Click(sender, e);
         }
 
         private void atualizar_Click(object sender, RoutedEventArgs e)
