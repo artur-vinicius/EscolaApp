@@ -65,7 +65,7 @@ namespace EscolaApp
             t.Descricao = txt_turma_Turmas.Text;
             t.AnoLetivo = int.Parse(txt_ano_Turmas.Text);
             //Inserir a turma na lista de turmas.
-            NTurma.Inserir(t);
+            NTurma.Atualizar(t);
             // Lista a turma inserida
             listar_Click(sender, e);
         }
