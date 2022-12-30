@@ -26,6 +26,7 @@ namespace EscolaApp
 
         private void inserir_Click(object sender, RoutedEventArgs e)
         {
+            // Novo objeto com os dados da turma que será inserida
             Turma t = new Turma();
             t.Id = int.Parse(txt_id_Turmas.Text);
             t.Curso = txt_curso_Turmas.Text;
@@ -33,6 +34,8 @@ namespace EscolaApp
             t.AnoLetivo = int.Parse(txt_ano_Turmas.Text);
             //Inserir a turma na lista de turmas.
             NTurma.Inserir(t);
+            // Lista a turma inserida
+            listar_Click(sender, e);
         }
 
         private void listar_Click(object sender, RoutedEventArgs e)
@@ -44,12 +47,27 @@ namespace EscolaApp
 
         private void excluir_Click(object sender, RoutedEventArgs e)
         {
-
+            // Novo objeto com os dados da turma que será inserida
+            Turma t = new Turma();
+            t.Id = int.Parse(txt_id_Turmas.Text);
+            // Inserir a turma na lista de turmas
+            NTurma.Excluir(t);
+            // Lista a turma inserida
+            ListarClick(sender, e);
         }
 
         private void atualizar_Click(object sender, RoutedEventArgs e)
         {
-
+            // Novo objeto com os dados da turma que será inserida
+            Turma t = new Turma();
+            t.Id = int.Parse(txt_id_Turmas.Text);
+            t.Curso = txt_curso_Turmas.Text;
+            t.Descricao = txt_turma_Turmas.Text;
+            t.AnoLetivo = int.Parse(txt_ano_Turmas.Text);
+            //Inserir a turma na lista de turmas.
+            NTurma.Inserir(t);
+            // Lista a turma inserida
+            listar_Click(sender, e);
         }
 
     }
