@@ -31,7 +31,7 @@ namespace EscolaApp
             a.Id = int.Parse(id_txt.Text);
             a.Nome = nome_txt.Text;
             a.Matricula = int.Parse(matricula_txt.Text);
-            a.IdTurma = int.Parse(idturma_txt.Text);
+            a.Email = email_txt.Text;
             //Inserir a turma na lista de turmas.
             NAluno.Inserir(a);
             // Lista a turma inserida
@@ -58,9 +58,20 @@ namespace EscolaApp
             a.Id = int.Parse(id_txt.Text);
             a.Nome = nome_txt.Text;
             a.Matricula = int.Parse(matricula_txt.Text);
-            a.IdTurma = int.Parse(idturma_txt.Text);
+            a.Email = email_txt.Text;
             NAluno.Atualizar(a);
             listar_Click(sender, e);
+        }
+        private void listTurmas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (alunos_list.SelectedItem != null)
+            {
+                Aluno obj = (Aluno)alunos_list.SelectedItem;
+                id_txt.Text = obj.Id.ToString();
+                nome_txt.Text = obj.Nome;
+                matricula_txt.Text = obj.Matricula.ToString();
+                email_txt.Text = obj.Email;
+            }
         }
     }
 }

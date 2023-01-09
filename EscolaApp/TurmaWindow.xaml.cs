@@ -37,7 +37,6 @@ namespace EscolaApp
             // Lista a turma inserida
             listar_Click(sender, e);
         }
-
         private void listar_Click(object sender, RoutedEventArgs e)
         {
             list_turmas.ItemsSource = null;
@@ -68,6 +67,17 @@ namespace EscolaApp
             NTurma.Atualizar(t);
             // Lista a turma inserida
             listar_Click(sender, e);
+        }
+        private void listTurmas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (list_turmas.SelectedItem != null)
+            {
+                Turma obj = (Turma)list_turmas.SelectedItem;
+                txt_id_Turmas.Text = obj.Id.ToString();
+                txt_curso_Turmas.Text = obj.Curso;
+                txt_turma_Turmas.Text = obj.Descricao;
+                txt_ano_Turmas.Text = obj.AnoLetivo.ToString();
+            }
         }
 
     }

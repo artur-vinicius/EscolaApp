@@ -10,12 +10,12 @@
         <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="96,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="14"><Run Language="pt-br" Text="ID"/></TextBlock>
         <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="85,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Nome" Height="19" Width="36"/>
         <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="76,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="54"><Run Language="pt-br" Text="Matrícula"/></TextBlock>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="70,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="66"><Run Language="pt-br" Text="ID da turma"/></TextBlock>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="70,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="66"><Run Language="pt-br" Text="E - mail"/></TextBlock>
 
         <TextBox  x:Name="id_txt" HorizontalAlignment="Left" Margin="79,67,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="22"/>
         <TextBox x:Name="nome_txt" HorizontalAlignment="Left" Margin="31,120,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="21"/>
         <TextBox x:Name="matricula_txt" HorizontalAlignment="Left" Margin="31,172,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="21"/>
-        <TextBox x:Name="idturma_txt" HorizontalAlignment="Left" Margin="67,223,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="72" Height="22"/>
+        <TextBox x:Name="email_txt" HorizontalAlignment="Left" Margin="31,223,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="22"/>
 
         <Button Content="Inserir" HorizontalAlignment="Left" Margin="208,54,0,0" VerticalAlignment="Top" Click="inserir_Click" Height="24" Width="44"/>
         <Button Content="Listar" HorizontalAlignment="Left" Margin="301,90,0,0" VerticalAlignment="Top" Click="listar_Click" Height="24" Width="38"/>

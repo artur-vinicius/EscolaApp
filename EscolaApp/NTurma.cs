@@ -13,13 +13,13 @@ namespace EscolaApp
         //private Turma[] turmas = new Turma[10];
         private static List<Turma> turmas = new List<Turma>();
         public static void Inserir(Turma t){
-            Abrir()
+            Abrir();
             turmas.Add(t);
-            Salvar()
+            Salvar();
         }
         public static List<Turma> Listar()
         {
-            Abrir()
+            Abrir();
             return turmas;
         }
         public static void Atualizar(Turma t)
@@ -33,17 +33,17 @@ namespace EscolaApp
                     obj.Descricao = t.Descricao;
                     obj.AnoLetivo = t.AnoLetivo;
                 }
-            Salvar()
+            Salvar();
         }
         public static void Excluir(Turma t)
         {
-            Abrir()
+            Abrir();
             // Percorrer a lista de turma procurando o id informado (t.Id)
             Turma x = null;
             foreach (Turma obj in turmas)
                 if (obj.Id == t.Id) x = obj;
             if (x != null) turmas.Remove(x);
-            Salvar()
+            Salvar();
         }
         public static void Abrir()
         {
