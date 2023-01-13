@@ -10,22 +10,22 @@ namespace EscolaApp
 {
     class NAluno
     {
-        private static List<Aluno> aluno = new List<Aluno>();
+        private static List<Aluno> alunos = new List<Aluno>();
         public static void Inserir(Aluno a)
         {
             Abrir();
-            aluno.Add(a);
+            alunos.Add(a);
             Salvar();
         }
         public static List<Aluno> Listar()
         {
             Abrir();
-            return aluno;
+            return alunos;
         }
         public static void Atualizar(Aluno a)
         {
             Abrir();
-            foreach (Aluno obj in aluno)
+            foreach (Aluno obj in alunos)
                 if (obj.Id == a.Id)
                 {
                     obj.Nome = a.Nome;
@@ -38,9 +38,9 @@ namespace EscolaApp
         {
             Abrir();
             Aluno x = null;
-            foreach (Aluno obj in aluno)
+            foreach (Aluno obj in alunos)
                 if (obj.Id == a.Id) x = obj;
-            if (x != null) aluno.Remove(x);
+            if (x != null) alunos.Remove(x);
             Salvar();
         }
         public static void Abrir()
@@ -53,11 +53,11 @@ namespace EscolaApp
                 // Objeto que abre um texto em um arquivo
                 f = new StreamReader("./turmas.xml");
                 // Chama a operação de desserialização informando a origem do texto XML
-                aluno = (List<Aluno>)xml.Deserialize(f);
+                alunos = (List<Aluno>)xml.Deserialize(f);
             }
             catch
             {
-                aluno = new List<Aluno>();
+                alunos = new List<Aluno>();
             }
             // Fecha o arquivo
             if (f != null) f.Close();
@@ -69,9 +69,22 @@ namespace EscolaApp
             // Objeto que grava um texto em um arquivo
             StreamWriter f = new StreamWriter("./turmas.xml", false);
             // Chama a operação de serialização informando o destino do texto XML
-            xml.Serialize(f, aluno);
+            xml.Serialize(f, alunos);
             // Fecha o arquivo
             f.Close();
+        }
+        public static void Matricular(Aluno a, Turma t)
+        {
+            a.IdTurma = t.Id;
+            Atualizar(a);
+        }
+        public static List<Aluno> Listar(Turma t)
+        {
+            Abrir(); // Abre a lista com todos os alunoss
+            List<Aluno> diario = new List<Aluno>(); // Lista de alunoss da turma t
+            foreach (Aluno obj in alunos)
+                if (obj.IdTurma == t.Id) diario.Add(obj);
+            return diario;
         }
     }
 }

@@ -7,22 +7,22 @@
         mc:Ignorable="d"
         Title="AlunoWindow" Height="300" Width="400">
     <Grid>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="96,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="14"><Run Language="pt-br" Text="ID"/></TextBlock>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="85,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Nome" Height="19" Width="36"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="96,42,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="14"><Run Language="pt-br" Text="ID"       /></TextBlock>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="85,94,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="36"><Run Language="pt-br" Text="Nome"     /></TextBlock>
         <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="76,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="54"><Run Language="pt-br" Text="Matrícula"/></TextBlock>
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="70,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="66"><Run Language="pt-br" Text="E - mail"/></TextBlock>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="70,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="66"><Run Language="pt-br" Text="E - mail" /></TextBlock>
 
-        <TextBox  x:Name="id_txt" HorizontalAlignment="Left" Margin="79,67,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Height="22"/>
-        <TextBox x:Name="nome_txt" HorizontalAlignment="Left" Margin="31,120,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="21"/>
+        <TextBox x:Name="id_txt"        HorizontalAlignment="Left" Margin="79,67,0,0"  Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"  Height="22"/>
+        <TextBox x:Name="nome_txt"      HorizontalAlignment="Left" Margin="31,120,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="21"/>
         <TextBox x:Name="matricula_txt" HorizontalAlignment="Left" Margin="31,172,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="21"/>
-        <TextBox x:Name="email_txt" HorizontalAlignment="Left" Margin="31,223,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="22"/>
+        <TextBox x:Name="email_txt"     HorizontalAlignment="Left" Margin="31,223,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="21"/>
 
-        <Button Content="Inserir" HorizontalAlignment="Left" Margin="208,54,0,0" VerticalAlignment="Top" Click="inserir_Click" Height="24" Width="44"/>
-        <Button Content="Listar" HorizontalAlignment="Left" Margin="301,90,0,0" VerticalAlignment="Top" Click="listar_Click" Height="24" Width="38"/>
-        <Button Content="Excluir" HorizontalAlignment="Left" Margin="297,54,0,0" VerticalAlignment="Top" Click="excluir_Click" Height="24" Width="46"/>
-        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="200,90,0,0" VerticalAlignment="Top" Click="atualizar_Click" Height="24" Width="60"/>
+        <Button Content="Inserir"   HorizontalAlignment="Left" Margin="200,54,0,0" VerticalAlignment="Top" Click="InserirClick"   Height="24" Width="60" />
+        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="200,90,0,0" VerticalAlignment="Top" Click="AtualizarClick" Height="24" Width="60"/>
+        <Button Content="Excluir"   HorizontalAlignment="Left" Margin="297,54,0,0" VerticalAlignment="Top" Click="ExcluirClick"   Height="24" Width="60"/>
+        <Button Content="Listar"    HorizontalAlignment="Left" Margin="297,90,0,0" VerticalAlignment="Top" Click="ListarClick"    Height="24" Width="60"/>
 
-        <ListBox x:Name="alunos_list" HorizontalAlignment="Left" Height="110" Margin="192,128,0,0" VerticalAlignment="Top" Width="170"/>
+        <ListBox x:Name="AlunosList" HorizontalAlignment="Left" Height="110" Margin="192,128,0,0" VerticalAlignment="Top" Width="170"/>
 
     </Grid>
 </Window>

@@ -24,49 +24,50 @@ namespace EscolaApp
             InitializeComponent();
         }
 
-        private void inserir_Click(object sender, RoutedEventArgs e)
+        private void InserirClick(object sender, RoutedEventArgs e)
         {
             // Novo objeto com os dados da turma que será inserida
             Aluno a = new Aluno();
             a.Id = int.Parse(id_txt.Text);
             a.Nome = nome_txt.Text;
-            a.Matricula = int.Parse(matricula_txt.Text);
+            a.Matricula = matricula_txt.Text;
             a.Email = email_txt.Text;
             //Inserir a turma na lista de turmas.
             NAluno.Inserir(a);
             // Lista a turma inserida
-            listar_Click(sender, e);
+            ListarClick(sender, e);
         }
-        private void listar_Click(object sender, RoutedEventArgs e)
+        private void ListarClick(object sender, RoutedEventArgs e)
         {
-            alunos_list.ItemsSource = null;
-            alunos_list.ItemsSource = NAluno.Listar();
+            AlunosList.ItemsSource = null;
+            AlunosList.ItemsSource = NAluno.Listar();
 
         }
-        private void atualizar_Click(object sender, RoutedEventArgs e)
+        private void AtualizarClick(object sender, RoutedEventArgs e)
         {
             Aluno a = new Aluno();
             a.Id = int.Parse(id_txt.Text);
             a.Nome = nome_txt.Text;
-            a.Matricula = int.Parse(matricula_txt.Text);
+            a.Matricula = matricula_txt.Text;
             a.Email = email_txt.Text;
+
             NAluno.Atualizar(a);
-            listar_Click(sender, e);
+            ListarClick(sender, e);
         }
         
-        private void excluir_Click(object sender, RoutedEventArgs e)
+        private void ExcluirClick(object sender, RoutedEventArgs e)
         {
             Aluno a = new Aluno();
             a.Id = int.Parse(id_txt.Text);
             NAluno.Excluir(a);
-            listar_Click(sender, e);
+            ListarClick(sender, e);
         }
         
-        private void listTurmas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void AlunosList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (alunos_list.SelectedItem != null)
+            if (AlunosList.SelectedItem != null)
             {
-                Aluno obj = (Aluno)alunos_list.SelectedItem;
+                Aluno obj = (Aluno)AlunosList.SelectedItem;
                 id_txt.Text = obj.Id.ToString();
                 nome_txt.Text = obj.Nome;
                 matricula_txt.Text = obj.Matricula.ToString();
