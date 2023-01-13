@@ -43,15 +43,6 @@ namespace EscolaApp
             alunos_list.ItemsSource = NAluno.Listar();
 
         }
-
-        private void excluir_Click(object sender, RoutedEventArgs e)
-        {
-            Aluno a = new Aluno();
-            a.Id = int.Parse(id_txt.Text);
-            NAluno.Excluir(a);
-            listar_Click(sender, e);
-        }
-
         private void atualizar_Click(object sender, RoutedEventArgs e)
         {
             Aluno a = new Aluno();
@@ -62,6 +53,15 @@ namespace EscolaApp
             NAluno.Atualizar(a);
             listar_Click(sender, e);
         }
+        
+        private void excluir_Click(object sender, RoutedEventArgs e)
+        {
+            Aluno a = new Aluno();
+            a.Id = int.Parse(id_txt.Text);
+            NAluno.Excluir(a);
+            listar_Click(sender, e);
+        }
+        
         private void listTurmas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (alunos_list.SelectedItem != null)
