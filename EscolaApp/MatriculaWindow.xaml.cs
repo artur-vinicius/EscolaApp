@@ -23,5 +23,13 @@ namespace EscolaApp
         {
             InitializeComponent();
         }
+
+        private void ListarClick(object sender, RoutedEventArgs e)
+        {
+            ListTurma.ItemsSource = null;
+            ListTurma.ItemsSource = NTurma.Listar();
+            ListAlunos.ItemsSource = null;
+            ListAlunos.ItemsSource = NAluno.Listar();
+        }
     }
 }
