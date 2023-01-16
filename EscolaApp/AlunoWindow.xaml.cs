@@ -70,7 +70,7 @@ namespace EscolaApp
                 Aluno obj = (Aluno)AlunosList.SelectedItem;
                 id_txt.Text = obj.Id.ToString();
                 nome_txt.Text = obj.Nome;
-                matricula_txt.Text = obj.Matricula.ToString();
+                matricula_txt.Text = obj.Matricula;
                 email_txt.Text = obj.Email;
             }
         }
