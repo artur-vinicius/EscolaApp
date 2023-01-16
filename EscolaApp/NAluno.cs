@@ -14,7 +14,12 @@ namespace EscolaApp
         public static void Inserir(Aluno a)
         {
             Abrir();
-            alunos.Add(a);
+            // Procurar o maior Id
+            int id = 0;
+            foreach (Aluno obj in alunos)
+                if (obj.Id > id) id = obj.Id;
+            t.Id = id + 1;
+            alunos.Add(t);
             Salvar();
         }
         public static List<Aluno> Listar()
