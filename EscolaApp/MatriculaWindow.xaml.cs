@@ -31,5 +31,20 @@ namespace EscolaApp
             ListAlunos.ItemsSource = null;
             ListAlunos.ItemsSource = NAluno.Listar();
         }
+        private void MatricularClick(object sender, RoutedEventArgs e)
+        {
+            if (listTurma.SelectedItem != null &&
+                listAlunos.SelectedItem != null)
+            {
+                Aluno a = (Aluno)listAlunos.SelectedItem;
+                Turma t = (Turma)listTurma.SelectedItem;
+                NAluno.Matricular(a, t);
+                ListarClick(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("É preciso selecionar um aluno e uma turma");
+            }
+        }
     }
 }
